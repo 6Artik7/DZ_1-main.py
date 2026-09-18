@@ -1,0 +1,4 @@
+n = int(input("Число студентов:"))
+k = int(input("Число мандаринов:"))
+print(k // n)
+print(k % n)

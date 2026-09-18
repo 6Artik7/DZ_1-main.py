@@ -1,0 +1,16 @@
+import math
+
+x1 = float(input("x1: "))
+x2 = float(input("x2: "))
+y1 = float(input("y1: "))
+y2 = float(input("y2: "))
+
+deltax = x2 - x1
+deltay = y2 - y1
+
+deltax2 = deltax ** 2
+deltay2 = deltay ** 2
+
+sun_of_squares = deltax2 + deltay2
+distance = math.sqrt(sun_of_squares)
+print(distance)

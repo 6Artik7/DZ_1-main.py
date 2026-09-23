@@ -1,0 +1,15 @@
+PI = 3.14
+
+def calculate_rectangle_area(width, height):
+    return width * height
+
+def calculate_circle_area(radius):
+    return PI * radius * radius
+
+width, height = map(float, input("введите стороны прямоугольника: ").split())
+ploshad_pramoygolnika = calculate_rectangle_area(width, height)
+print("площадь прямоугольника равна:", ploshad_pramoygolnika)
+
+radius = float(input("введите радиус: "))
+ploshad_kruga = calculate_circle_area(radius)
+print("площадь круга равна:", ploshad_kruga)

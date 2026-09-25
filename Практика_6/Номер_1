@@ -1,0 +1,32 @@
+def diagnose(temp, pressure, pulse):
+    
+    critical = []
+    if temp < 35 or temp > 38:
+        critical.append("температура")
+    if pressure < 105 or pressure > 140:
+        critical.append("давление")
+    if pulse < 55 or pulse > 110:
+        critical.append("пульс")
+
+    if critical:
+        return f"Требуется врач — значительные отклонения: {', '.join(critical)}"
+
+    mild = []
+    if 35 <= temp < 36 or 37 < temp <= 38:
+        mild.append("температура")
+    if 105 <= pressure < 110 or 130 < pressure <= 140:
+        mild.append("давление")
+    if 55 <= pulse < 60 or 100 < pulse <= 110:
+        mild.append("пульс")
+
+    if mild:
+        return f"Лёгкое недомогание — отклонения по: {', '.join(mild)}"
+
+    return "Нормальное состояние — все показатели в пределах нормы"
+
+print("Диагностика состояния здоровья")
+temp = float(input("Температура (°C): "))
+pressure = int(input("Давление (верхнее): "))
+pulse = int(input("Пульс (уд/мин): "))
+
+print(f"\nРезультат: {diagnose(temp, pressure, pulse)}")
